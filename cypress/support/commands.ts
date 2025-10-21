@@ -27,10 +27,11 @@
 /// <reference types="cypress-xpath" />
 require('cypress-xpath');
 
-// Cypress.Commands.add('URL', function(){
-//     cy.visit('https://your-environment.example.com')
-//     }
-// )
+Cypress.Commands.add('URL', function(){
+    const URL = Cypress.env('LOGIN_URL') || Cypress.env('URL') || 'https://your-environment.example.com';
+    cy.visit(URL);
+    }
+)
 
 // Cypress.Commands.add('loginSiswa', function(){
 //     // cy.log(`Username: ${Cypress.env('username')}`);
@@ -135,7 +136,7 @@ Cypress.Commands.add('UncaughtException', function(){
         // failing the test
         return false
         });
-        cy.waitForLoading().get('.text-primary-500').click();
+        cy.waitForLoading()
 
     }
 )
@@ -249,7 +250,7 @@ Cypress.Commands.add('waitForLoading', () => {
   });
 
 
-Cypress.Commands.add('loginENV', function(){
+Cypress.Commands.add('loginSISWA', function(){
 
     const URL = Cypress.env('LOGIN_URL');
     const USER_SISWA = Cypress.env('USERNAME_SISWA');
@@ -264,9 +265,8 @@ Cypress.Commands.add('loginENV', function(){
     cy.get(`[name='identifier']`).type(USER_SISWA,{ log: false });
     cy.get(`[name='password']`).type(PASS_SISWA,{ log: false });
     cy.get('.gap-4').click()
-    cy.get(".cursor-pointer").click();
+    cy.waitShort().get(".cursor-pointer").click();
     cy.url().should('not.include', '/login');
-
     cy.waitForLoading();
     cy.log("✅ Login sebagai Siswa berhasil");
 
@@ -321,19 +321,11 @@ Cypress.Commands.add('login_ADMIN_ENV', function(){
     }
 )
 
-Cypress.Commands.add('AdminLaporan', function(){
-    cy.get(`[href='/admin/laporan']`).click();
-    cy.get('.mb-auto > div:nth-of-type(1) .css-3zwssd-control').click().type('empat{enter}')
-    cy.get(`[name='startAt']`).click()
-    cy.waitShort().xpath(`//button[.='1']`).click()
-    cy.waitShort().get(`.relative[type='button']`).click()
-    cy.waitShort().get(`[name='endAt']`).click()
-    cy.waitShort().xpath(`//button[.='30']`).click({ multiple: true })
-    cy.waitShort().get(`.relative[type='button']`).click()
-    cy.waitShort().get(`div:nth-of-type(4) .css-3zwssd-control`).click().type('jam{enter}')
-    cy.waitShort().get(`.flex-1`).click()
-    cy.waitShort().get(`div:nth-of-type(4) .css-3zwssd-control`).click().type('sekolah{enter}')
-
+Cypress.Commands.add('UploadClass', function(){
+    cy.get(`[href='/admin/setting-kelas']`).click();
+    cy.get('.py-3').click();
+    cy.get(`[name='name']`).type("Kelas Upload Test");
+    cy.get('.css-3zwssd-control').click().type('upload{enter}');
     }
 )
 
