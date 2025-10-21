@@ -1,9 +1,7 @@
 declare namespace Cypress {
   interface Chainable<Subject = any> {
     // Admin Management
-
     waitForLoading(): Chainable<any>
-
     URL(): Chainable<any>
     loginSiswa(): Chainable<any>
     loginUstadz(): Chainable<any>
@@ -17,11 +15,9 @@ declare namespace Cypress {
     AdminCreateAdmin(): Chainable<any>
     searchUser(): Chainable<any>
     settingKelas(): Chainable<any>
-    UncaughtException(): Chainable<any>
-   
+    UncaughtException(): Chainable<any>   
     URL_ENV(): Chainable<any>
-    loginENV(): Chainable<any>
-    waitForLoading(): Chainable<any>
+    loginSISWA(): Chainable<any>
     login_UST_ENV(): Chainable<any>
     login_ADMIN_ENV(): Chainable<any>
     profile(): Chainable<any>
@@ -30,30 +26,5 @@ declare namespace Cypress {
     waitMiddle(): Chainable<any>
     waitLong(): Chainable<any>
     UploadClass(): Chainable<any>
-    xxx(): Chainable<any>
-    xxx(): Chainable<any>
-    xxx(): Chainable<any>
-    xxx(): Chainable<any>
-    xxx(): Chainable<any>
-    xxx(): Chainable<any>
-    xxx(): Chainable<any>
-    xxx(): Chainable<any>
-    xxx(): Chainable<any>
-    xxx(): Chainable<any>
-    xxx(): Chainable<any>
-    xxx(): Chainable<any>
-    xxx(): Chainable<any>
-    xxx(): Chainable<any>
-    xxx(): Chainable<any>
-    xxx(): Chainable<any>
-    xxx(): Chainable<any>
-    xxx(): Chainable<any>
-    xxx(): Chainable<any>
-
-
   }
 }
-
-
-
-  

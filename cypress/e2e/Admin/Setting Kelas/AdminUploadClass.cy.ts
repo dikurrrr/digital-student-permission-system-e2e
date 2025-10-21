@@ -2,7 +2,7 @@
 require('cypress-xpath');
 
 describe('Admin', () => {
-  it('Setting Class', () => {
+  it('Upload Class', () => {
 
     cy.loginAdmins();
     cy.UncaughtException()

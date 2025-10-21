@@ -4,7 +4,7 @@
 describe('Login Muhi', () => {
   it('Login Siswa', () => {
 
-    cy.loginENV();
+    cy.loginSISWA();
     cy.UncaughtException();
     cy.profile();
     cy.logout();
