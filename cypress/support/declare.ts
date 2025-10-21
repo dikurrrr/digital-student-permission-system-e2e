@@ -6,8 +6,6 @@ declare namespace Cypress {
 
     URL(): Chainable<any>
     loginSiswa(): Chainable<any>
-    uncaughtException(): Chainable<any>
-    UncaughtException(): Chainable<any>
     loginUstadz(): Chainable<any>
     loginAdmin(): Chainable<any>
     AdminCreateUser(): Chainable<any>
