@@ -6,7 +6,7 @@ describe('Login Muhi', () => {
 
     cy.URL();
     cy.loginSiswa();
-    cy.uncaughtException();
+    cy.UncaughtException();
     cy.logout()
     cy.confirmLogout()
 

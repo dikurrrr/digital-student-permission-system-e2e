@@ -129,8 +129,8 @@ Cypress.Commands.add('loginAdmins', function(){
     }
 )
 
-Cypress.Commands.add('uncaughtException', function(){
-       Cypress.on('uncaught:exception', (err, runnable) => {
+Cypress.Commands.add('UncaughtException', function(){
+       Cypress.on('Uncaught:exception', (err, runnable) => {
         // returning false here prevents Cypress from
         // failing the test
         return false
@@ -140,14 +140,6 @@ Cypress.Commands.add('uncaughtException', function(){
     }
 )
 
-Cypress.Commands.add('UncaughtException', function(){
-       Cypress.on('uncaught:exception', (err, runnable) => {
-        // returning false here prevents Cypress from
-        // failing the test
-        return false
-        });
-    }
-)
 
 Cypress.Commands.add('AdminCreateMusyrif', function(){
     cy.get(`[href='/admin/user-management']`).click();

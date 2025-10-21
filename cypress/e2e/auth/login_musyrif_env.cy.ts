@@ -5,7 +5,7 @@ describe('Login Muhi', () => {
   it('Login Musyrif', () => {
 
     cy.login_UST_ENV();
-    cy.uncaughtException();
+    cy.UncaughtException();
     cy.profile();
     cy.logout()
     cy.confirmLogout()
