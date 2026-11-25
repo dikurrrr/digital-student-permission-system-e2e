@@ -178,7 +178,12 @@
     "yauzl": "^2.10.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:run:headed": "cypress run --headed",
+    "cy:run:auth": "cypress run --spec \"cypress/e2e/auth/**/*.cy.ts\"",
+    "cy:run:admin": "cypress run --spec \"cypress/e2e/Admin/**/*.cy.ts\"",
+    "test": "cypress run"
   },
   "keywords": [],
   "author": "",
