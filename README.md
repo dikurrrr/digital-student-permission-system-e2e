@@ -98,7 +98,7 @@ The config exposes these to tests as:
 | `LOADING_SELECTOR` | `LOADING_SELECTOR` | `cy.waitForLoading()` |
 | `LOADING_TIMEOUT` | `LOADING_TIMEOUT` | `cy.waitForLoading()` |
 
-If `URL` is empty, `cy.URL()` falls back to `https://your-environment.example.com`.
+If `URL` is empty, `cy.URL()` falls back to `http://localhost:3000`.
 
 ## Running Tests
 

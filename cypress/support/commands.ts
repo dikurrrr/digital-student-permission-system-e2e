@@ -28,7 +28,7 @@
 require('cypress-xpath');
 
 Cypress.Commands.add('URL', function(){
-    const URL = Cypress.env('LOGIN_URL') || Cypress.env('URL') || 'https://your-environment.example.com';
+    const URL = Cypress.env('LOGIN_URL') || Cypress.env('URL') || 'http://localhost:3000';
     cy.visit(URL);
     }
 )
